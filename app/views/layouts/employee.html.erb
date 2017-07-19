@@ -39,16 +39,12 @@
                      <li id="logo"><a href="<%= root_url %>">SHARE YOUR INTERNET</a></li>
 
                      <% if !logged_in? %>                    
-                       <li><%= link_to "Log In", login_path %></li>
-                       <li><a href="#">FAQ</a></li>
-                        <li><%= link_to "Sign up", signup_path %></li>
-  
 
-                     <% else %>
-                       <li><%= link_to "Log Out", logout_path, method: :delete %></li>
-                       <li><%= link_to "Your Account", user_path(current_user) %></li>
-                       <li><a href="#">FAQ</a></li>                      
-                     <% end %>
+
+    			           <% else %>
+    			             <li><%= link_to "Log Out", logout_path, method: :delete %></li>
+  
+    			           <% end %>
                      </ul>
           </div>
         </div>

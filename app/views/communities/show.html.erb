@@ -1,0 +1,50 @@
+<div class="stretch">
+
+<h1><%= @community.community_name %> - <%= @community.community_city %></h1>
+
+
+<p><%= @community.community_name %></p>
+<p><%= @community.community_city %>, <%= @community.community_state %> <%= @community.community_zip %></p><br>
+
+
+<p>Number of registered residents: <%= User.where(community_id: @community.id ).count %></p><br><br>
+
+
+<% if in_this_community? %>
+
+  <% if all_alone? %>
+    <h2>We will send your neighbors postcards about our service. <%= link_to 'Refer Your Neighbors', new_user_rolodex_path(current_user.id) %></h2>
+  <% else %>
+  <h2>Choose A Neighbor Who Lives Within "Wi-fi" Range Of You</h2>
+    <ul>
+    <% User.where(community_id: @community.id).each do |user| %>
+      <% unless user == current_user %>
+      <li>
+      <%= link_to user.first_name.capitalize, user_path(user) %> <%= link_to user.last_name.capitalize[0,1], user_path(user) %><br>
+      <%= user.address_line_one %><br>
+      <%= user.city %>, <%= user.state %> <%= user.zip_code %><br><br>
+      </li>
+    <% end %>
+    <% end %>
+     </ul>
+
+     <h2>Don't see a neighbor that lives close enough? <%= link_to 'Refer Us To One', new_user_rolodex_path(current_user.id) %></h2>
+  <% end %><br><br>
+
+
+
+
+<% else %>
+
+  <%= button_to "Join This Community", user_in_it_path(@user, :community_id => @community.id), :class => 'altbtn altbtn-lg altbtn-outline', method: 'post' %><br><br><br>
+
+<% end %>
+
+<p><%= link_to "Back To List Of Communities", communities_path %></p><br><br><br><br><br><br><br>
+
+
+
+
+
+
+</div>

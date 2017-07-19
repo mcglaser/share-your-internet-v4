@@ -1,0 +1,54 @@
+<div class="stretch">
+
+  <h1>Sign-Up</h1>
+
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+
+      <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      <br><br></ul>
+    </div>
+  <% end %>
+
+    <div class="">
+
+		<%= form_for(@user) do |f| %>
+		<%= f.label :email %>
+		<%= f.email_field :email %><br><br>
+		<%= f.label :password, 'Password' %>
+		<%= f.password_field :password %><br><br>
+		<%= f.label :password_confirmation, "Confirm Password" %>
+		<%= f.password_field :password_confirmation %><br><br>
+		<%= f.label :first_name, 'First Name' %>
+		<%= f.text_field :first_name %><br><br>
+		<%= f.label :last_name, 'Last Name' %>
+		<%= f.text_field :last_name %><br><br>
+		<%= f.label :address_line_one, 'Address Line 1' %>
+		<%= f.text_field :address_line_one %><br><br>
+		<%= f.label :address_line_two, 'Address Line 2' %>
+		<%= f.text_field :address_line_two %><br><br>
+		<%= f.label :city, 'City' %>
+		<%= f.text_field :city %><br><br>
+		<%= f.label :state, 'State' %>
+		<%= f.select :state, options_for_select(us_states) %><br><br>
+		<%= f.label :zip_code, 'Zip Code' %>
+		<%= f.text_field :zip_code %><br><br>
+		<%= f.label :internet_type, 'What Type Of Internet Do You Currently Have?' %>
+		<%= f.select :internet_type, ['I do not currently have internet', 'Dial-up', 'DSL', 'Fibre Optic', 'Broadband', 'Mobile Internet', 'Satellite Internet', 'Other', 'Unknown'] %><br><br>
+		<%= f.label :internet_speed, 'Which Of The Following Download Speeds Most Closely Matches Your Home Internet?' %>
+		<%= f.select :internet_speed, ['I do not currently have internet', '56k', '1 Mbps', '5 Mbps', '10 Mbps', '20Mbps', '30 Mbps', '40 Mbps', '50 Mbps', '75 Mbps', '100 Mbps or more', 'Unknown'] %><br><br>
+		<%= f.label :monthly_cost, 'What Is Your Home Internet\'s Monthly Cost? (Leave Blank If You Don\'t Currently Have Internet)' %>
+		<%= f.text_field :monthly_cost %><br><br>
+		<%= f.submit 'Sign Up', :class => 'altbtn altbtn-lg altbtn-outline' %>
+		<% end %>
+    
+    </div>
+
+
+  <h2>Already Have An Account? <%= link_to "Log In", login_path %></h2>
+<br><br><br><br><br><br>
+</div>
+

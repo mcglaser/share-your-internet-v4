@@ -1,0 +1,28 @@
+<div class="stretch">
+
+<h1>Your Rolodex</h1>
+
+
+<%= render 'form', rolodex: @rolodex %>
+<h2>Add A New Neighbor To This Rolodex</h2>
+<%= form_for @rolodex do |f| %>
+  <p>Rolodex Nickname: <%= f.text_field :nickname %></p><br><br>
+  <ul>
+    <%= f.fields_for :referrals do |referral| %>
+    <li>
+      First Name: <%= referral.text_field :ref_first_name %><br><br>
+      Last Name: <%= referral.text_field :ref_last_name %><br><br>
+      Address Line 1: <%= referral.text_field :ref_address_line_one %><br><br>
+      Address Line 2: <%= referral.text_field :ref_address_line_two %><br><br><br>
+    </li>
+    <% end %>
+  </ul>
+  <%= f.submit 'Add Referral', :class => 'altbtn altbtn-lg altbtn-outline' %>
+<% end %>
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+</div>

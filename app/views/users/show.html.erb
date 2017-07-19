@@ -1,0 +1,60 @@
+<div class="stretch">
+
+
+<% if @user == current_user %>
+
+<h1>Your Account</h1>
+<p><%= link_to "Edit Your Account", edit_user_path(current_user) %> | <%= link_to "Log out", logout_path, method: :delete %></p><br><br>
+<%= @user.email %><br><br>
+<%= @user.first_name.capitalize %> <%= @user.last_name.capitalize %><br>
+<%= @user.address_line_one %><br>
+<% unless @user.address_line_two.blank? %>
+<%= @user.address_line_two %><br>
+<% end %>
+<%= @user.city %>, <%= @user.state %> <%= @user.zip_code %><br><br>
+<br><br>
+<% if no_internet? %>
+<p>You Do Not Currently Have Internet</p><br><br>
+<% else %>
+<p>Your Internet Type: <%= @user.internet_type %></p><br><br>
+<p>Your Internet Speed: <%= @user.internet_speed %></p><br><br>
+<p>Your Montly Internet Cost: $<%= @user.monthly_cost.ceil %></p><br><br>
+<% end %>
+<% if @user.community_id.blank? %>
+<p>You haven't registered a community yet! </p><br>
+<%= link_to "Click Here To Find A Community Near You", communities_path %>
+<% else %>
+<p>You Are A Resident Of: <%= link_to @user.community.community_name, community_path(@user.community_id) %></p><br><br>
+<% end %>
+
+
+<% elsif same_community? %>
+
+<h1><%= @user.first_name.capitalize %> <%= @user.last_name.capitalize[0,1] %>- <%= @user.city %></h1>
+<%= @user.first_name.capitalize %> <%= @user.last_name.capitalize[0,1] %><br>
+<%= @user.address_line_one %><br>
+<% unless @user.address_line_two.blank? %>
+<%= @user.address_line_two %><br>
+<% end %>
+<%= @user.city %>, <%= @user.state %> <%= @user.zip_code %><br>
+<br><br>
+<% if no_internet? %>
+<p>This Member Does Not Currently Have Home Internet</p><br><br>
+<% else %>
+<p>Internet Type: <%= @user.internet_type %></p><br><br>
+<p>Internet Speed: <%= @user.internet_speed %></p><br><br>
+<p>Monthly Internet Cost: $<%= @user.monthly_cost.ceil %></p><br><br>
+<% end %>
+<%= link_to "Back To Your Community", community_path(@user.community_id) %>
+
+
+<% else %>
+
+
+<h1>You Do Not Have Access To This Page</h1>
+<img src="http://i.imgur.com/49uBzb0.gif"><br><br>
+<%= link_to "Back To Communities", communities_path %>
+
+<% end %>
+
+</div>

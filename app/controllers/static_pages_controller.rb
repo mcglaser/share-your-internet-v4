@@ -1,5 +1,5 @@
 class StaticPagesController < ApplicationController
-
+layout "employee", only: [:employee]
 
 
 

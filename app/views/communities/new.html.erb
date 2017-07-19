@@ -1,0 +1,39 @@
+<div class="stretch">
+
+  <h1>Register A Community</h1>
+
+  <% if @community.errors.any? %>
+    <div id="error_explanation">
+
+      <ul>
+      <% @community.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      <br><br></ul>
+    </div>
+  <% end %>
+
+    <div class="">
+
+		<%= form_for(@community) do |f| %>
+		<%= f.label :community_name, 'Community Name/Street Name' %>
+		<%= f.text_field :community_name %><br><br>
+		<%= f.label :community_address, 'Address' %>
+		<%= f.text_field :community_address %><br><br>
+		<%= f.label :community_city, 'City' %>
+		<%= f.text_field :community_city %><br><br>
+		<%= f.label :community_state, 'State' %>
+		<%= f.select :community_state, options_for_select(us_states) %><br><br>
+		<%= f.label :community_zip, 'Zip Code' %>
+		<%= f.text_field :community_zip %><br><br>
+		<%= f.submit 'Submit', :class => 'altbtn altbtn-lg altbtn-outline' %>
+		<% end %>
+    
+    </div>
+
+
+  
+
+
+</div>
+

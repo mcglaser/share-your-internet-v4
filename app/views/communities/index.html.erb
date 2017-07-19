@@ -1,0 +1,41 @@
+<div class="stretch">
+
+
+
+
+
+
+
+
+<% if first_one_here? %>
+<h1>Welcome To ShareYourInternet.com</h1>
+<h3>Share Your Internet works by bringing neighbors together to share wi-fi signals.<br><br> Once you register your home, we'll reach out to your neighbors asking them to sign-up.</h3>
+
+<h2><%= link_to "Click Here To Register Your Home Or Community", new_community_path %></h2>
+<img src="http://i.imgur.com/OgW8EN2.jpg" alt="Router" height="250" width="325">
+<% else %>
+<h1>Communities In Your Area</h1>
+<h2>In the United States, users tell us that companies are charging them an average of <%= link_to "$#{average_internet_cost} per month", average_path %> for internet.</h2>
+<h2>To start saving money, find your community....<br><br>
+If your don't see your community, register one below.</h2>
+
+<ul>
+<% Community.where(community_zip: current_user.zip_code).sort { |a,b| a.community_name <=> b.community_name }.each do |community| %>
+<li>
+<%= link_to community.community_name, community %><br><br>
+</li>
+<% end %>
+</ul>
+
+<br><br><%= button_to "Register A New Community", new_community_path, :class => 'altbtn altbtn-lg altbtn-outline', method: :get %>
+
+<br><br><br><br><br><br><br><br>
+<% end %>
+
+
+
+
+</div>
+
+
+
