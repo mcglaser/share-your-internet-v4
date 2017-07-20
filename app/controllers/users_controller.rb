@@ -19,6 +19,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+    @community_id = nil
     if @user.save
       log_in @user	
       redirect_to communities_path
