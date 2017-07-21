@@ -13,13 +13,7 @@
   <link rel="icon" 
      type="image/x-icon" 
      href="http://www.iamthemodernman.biz/internet/2/images/favicon.ico">
-  <!--
-     <script type="text/javascript">
-       if (screen.width <= 599) {
-         window.location = "http://www.site.com/mobile.html";
-       }
-     </script>
-    -->
+
 </head>
 
   <body>
@@ -41,7 +35,7 @@
                      <% if !logged_in? %>                    
                        <li><%= link_to "Log In", login_path %></li>
                        <li><a href="#">FAQ</a></li>
-                        <li><%= link_to "Sign up", signup_path %></li>
+                        <li><%= link_to "Sign Up", signup_path %></li>
   
 
                      <% else %>

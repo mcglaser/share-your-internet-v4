@@ -68,6 +68,7 @@ body {
 #logo {
     float: left;
     font-size: 26px;
+    padding: 0px 0px 4px 0px;
 }
 
 .header ul {
@@ -79,7 +80,7 @@ body {
 .header li {
     float: right;
     display: inline;
-    padding: 0 15px 0 1px;
+    padding: 4px 15px 0 1px;
     margin: 0 45px 0 0;
 }
 
@@ -376,7 +377,7 @@ body {
 .copyright {
     width: 100%;
     text-align: center;
-    padding: 8px 0;
+    padding: 8px 0 16px 0;
     color: #ffffff;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 9px;
