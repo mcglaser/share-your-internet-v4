@@ -316,6 +316,34 @@ body {
     height:30px;
 }
 
+.form-container {
+  max-width: 1000px;
+  margin: 20px auto 0 auto;
+  padding: 30px;
+  background-color: #ffffff
+  border-radius: 2px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #2C3E50;
+}
+
+
+.form-row {
+  max-width: 350px;  
+  margin: auto;
+  padding: 10px 0;
+  display: flex;
+}
+
+.form-row label {
+  padding-right: 10px;
+}
+
+.form-row input {
+  height: 12px;  
+  flex: 1;
+}
+
 
 #bottom {
   position: absolute;
