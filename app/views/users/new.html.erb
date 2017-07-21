@@ -1,19 +1,21 @@
 <div class="stretch">
 
-  <h1>Sign-Up</h1>
 
-  <% if @user.errors.any? %>
-    <div id="error_explanation">
-
-      <ul>
-      <% @user.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      <br><br></ul>
-    </div>
-  <% end %>
-
+<br><br><br>
     <div class="form-container">
+
+	  <h1>Sign-Up</h1>
+
+	  <% if @user.errors.any? %>
+	    <div id="error_explanation">
+
+	      <ul>
+	      <% @user.errors.full_messages.each do |message| %>
+	        <li><%= message %></li>
+	      <% end %>
+	      <br><br></ul>
+	    </div>
+	  <% end %>    
 
 		<%= form_for(@user) do |f| %>
 
@@ -76,11 +78,13 @@
 		<%= f.text_field :monthly_cost %><br><br>
 		<%= f.submit 'Sign Up', :class => 'altbtn altbtn-lg altbtn-outline' %>
 		<% end %>
-    
+
+
+        <h2>Already Have An Account? <%= link_to "Log In", login_path %></h2>    
     </div>
 
 
-  <h2>Already Have An Account? <%= link_to "Log In", login_path %></h2>
+
 <br><br><br><br><br><br>
 </div>
 
