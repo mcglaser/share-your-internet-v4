@@ -7,11 +7,16 @@
 <% end %>
 
 <%= form_for(:session, url: login_path) do |f| %>
-<%= f.label :email%>
-<%= f.email_field :email, class: 'form-control' %><br><br>
-<%= f.label :password %>
-<%= f.password_field :password, class: 'form-control' %><br><br>
-<%= f.submit "Log in" %><br><br>
+<div class="form-row">
+<%= f.label :email, class: "form-row label" %>
+<%= f.email_field :email, class: "form-row input" %><br><br>
+</div>
+<div class="form-row">
+<%= f.label :password, class: "form-row label" %>
+<%= f.password_field :password, class: "form-row input" %><br><br>
+</div>
+<%= f.submit "Log in", :class => 'altbtn altbtn-lg altbtn-outline' %><br><br>
 <% end %>
+<br><br>
 <p>New user? <%= link_to "Sign up now!", signup_path %></p>
 </div>
