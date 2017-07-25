@@ -257,6 +257,18 @@ body {
     color: #18BC9C;
 }
 
+.register-a-community {
+    width: 500px;
+    height: auto;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.instructions {
+    text-align: left;
+}
+
 
 /*######## Smart Green ########*/
 .form {
