@@ -1,4 +1,21 @@
 <div class="stretch">
+
+
+  <% if @community.errors.any? %>
+    <div class="error-explanation">
+
+      <ul>
+      <% @community.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      <br><br></ul>
+    </div>
+  <% end %>
+
+
+
+
+
   <div class="register-community-form-container">
   <h1>Register Your Community</h1>
 
@@ -8,16 +25,6 @@
   enter your street name for community name.</h3>
   </div>
 
-  <% if @community.errors.any? %>
-    <div id="error_explanation">
-
-      <ul>
-      <% @community.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      <br><br></ul>
-    </div>
-  <% end %>
 
     <div class="">
 
@@ -52,6 +59,7 @@
 
   
 
+<br><br><br><br><br><br>
 
 </div>
 

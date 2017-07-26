@@ -220,6 +220,7 @@ body {
 
 .stretch {
     width: 100%;
+    height: auto;
 
     margin: 0px auto;
     text-align: center;
@@ -282,8 +283,17 @@ body {
 }
 
 .form-row input {
-  height: 12px;  
+  height: 12px;
+  color: #2C3E50;
+  font-weight: bold;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;  
   flex: 1;
+}
+
+.error-explanation {
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: red;
+    margin-top: 25px;
 }
 
 .welcome-text h3 {
