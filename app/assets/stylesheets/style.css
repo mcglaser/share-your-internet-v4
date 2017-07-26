@@ -258,9 +258,6 @@ body {
 }
 
 
-
-
-
 .form-container {
   max-width: 900px;
   margin: 20px auto 0 auto;
@@ -287,6 +284,14 @@ body {
 .form-row input {
   height: 12px;  
   flex: 1;
+}
+
+.welcome-text h3 {
+    padding-bottom: 15px;
+}
+
+#bold-text {
+    font-weight: bold;
 }
 
 .register-community-form-container {

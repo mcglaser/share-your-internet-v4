@@ -8,8 +8,16 @@
 
 
 <% if first_one_here? %>
+<div class="welcome-text">
 <h1>Welcome To ShareYourInternet.com</h1>
-<h3>Share Your Internet works by bringing neighbors together to share wi-fi signals.<br><br> Once you register your home, we'll reach out to your neighbors asking them to sign-up.<br><br>It's easy. It's free. <b>And it's anonymous!</b></h3>
+<h3>Share Your Internet works by bringing neighbors together to share wi-fi signals.</h3> 
+
+<h3>Once you register your home, we'll reach out to your neighbors asking them to sign-up.</h3>
+
+<h3>If a neighbor signs up, we'll make a match and you'll both save $$$.</h3>
+
+<h3>It's easy. It's free. <span id="bold-text">And it's anonymous!</span></h3>
+</div>
 
 <h2><%= link_to "Click Here To Register Your Home Or Community", new_community_path %></h2>
 <a href="<%= new_community_path %>"><img src="http://i.imgur.com/OgW8EN2.jpg" alt="Router" height="250" width="325"></a>
