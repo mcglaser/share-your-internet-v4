@@ -9,10 +9,10 @@
 
 <% if first_one_here? %>
 <h1>Welcome To ShareYourInternet.com</h1>
-<h3>Share Your Internet works by bringing neighbors together to share wi-fi signals.<br><br> Once you register your home, we'll reach out to your neighbors asking them to sign-up.</h3>
+<h3>Share Your Internet works by bringing neighbors together to share wi-fi signals.<br><br> Once you register your home, we'll reach out to your neighbors asking them to sign-up.<br><br>It's easy. It's free. <b>And it's anonymous!</b></h3>
 
 <h2><%= link_to "Click Here To Register Your Home Or Community", new_community_path %></h2>
-<img src="http://i.imgur.com/OgW8EN2.jpg" alt="Router" height="250" width="325">
+<a href="<%= new_community_path %>"><img src="http://i.imgur.com/OgW8EN2.jpg" alt="Router" height="250" width="325"></a>
 <% else %>
 <h1>Communities In Your Area</h1>
 <h2>In the United States, users tell us that companies are charging them an average of <%= link_to "$#{average_internet_cost} per month", average_path %> for internet.</h2>
