@@ -330,6 +330,8 @@ body {
 
 .instructions {
     text-align: left;
+    width: 530px;
+    margin: auto;
 }
 
 
