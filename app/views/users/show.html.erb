@@ -3,8 +3,8 @@
 
 <% if @user == current_user %>
 
+<div class="your-account-container">
 <h1>Your Account</h1>
-<p><%= link_to "Edit Your Account", edit_user_path(current_user) %> | <%= link_to "Log out", logout_path, method: :delete %></p><br><br>
 <%= @user.email %><br><br>
 <%= @user.first_name.capitalize %> <%= @user.last_name.capitalize %><br>
 <%= @user.address_line_one %><br>
@@ -16,9 +16,11 @@
 <% if no_internet? %>
 <p>You Do Not Currently Have Internet</p><br><br>
 <% else %>
-<p>Your Internet Type: <%= @user.internet_type %></p><br><br>
-<p>Your Internet Speed: <%= @user.internet_speed %></p><br><br>
-<p>Your Montly Internet Cost: $<%= @user.monthly_cost.ceil %></p><br><br>
+<div class="your-account-internet-info">
+<p>Internet Type: <%= @user.internet_type %></p>
+<p>Internet Speed: <%= @user.internet_speed %></p>
+<p>Internet Cost: $<%= @user.monthly_cost.ceil %></p><br><br>
+</div>
 <% end %>
 <% if @user.community_id.blank? %>
 <p>You haven't registered a community yet! </p><br>
@@ -26,6 +28,8 @@
 <% else %>
 <p>You Are A Resident Of: <%= link_to @user.community.community_name, community_path(@user.community_id) %></p><br><br>
 <% end %>
+<p><%= link_to "Edit Your Account", edit_user_path(current_user) %> | <%= link_to "Log out", logout_path, method: :delete %></p><br><br>
+</div>
 
 
 <% elsif same_community? %>
