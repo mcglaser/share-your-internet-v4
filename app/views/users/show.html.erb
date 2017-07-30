@@ -28,7 +28,7 @@
 <% else %>
 <p>You Are A Resident Of: <%= link_to @user.community.community_name, community_path(@user.community_id) %></p><br><br>
 <% end %>
-<p><%= link_to "Edit Your Account", edit_user_path(current_user) %> | <%= link_to "Log out", logout_path, method: :delete %></p><br><br>
+<p><%= link_to "Edit Your Account", edit_user_path(current_user) %> <span id="bold-text">|</span> <%= link_to "Log out", logout_path, method: :delete %></p><br><br>
 </div>
 
 
