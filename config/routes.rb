@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   root 'static_pages#home'
 
+  get 'faq' => 'static_pages#faq'
+
   get 'signup' => 'users#new'
 
   get 'signup' => 'users#new'
