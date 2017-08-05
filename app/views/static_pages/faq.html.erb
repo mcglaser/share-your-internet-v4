@@ -1,4 +1,165 @@
 <div class="stretch">
 <h1>FAQ</h1>
-<h2>Coming Soon...</h2>
+
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+<script>
+ $(document).ready(function() {
+ 
+    $('.faq_question').click(function() {
+ 
+        if ($(this).parent().is('.open')){
+            $(this).closest('.faq').find('.faq_answer_container').animate({'height':'0'},500);
+            $(this).closest('.faq').removeClass('open');
+ 
+            }else{
+                var newHeight =$(this).closest('.faq').find('.faq_answer').height() +'px';
+                $(this).closest('.faq').find('.faq_answer_container').animate({'height':newHeight},500);
+                $(this).closest('.faq').addClass('open');
+            }
+ 
+    });
+ 
+});
+</script>
+
+<div class="faq_container">
+
+<div class="faq">
+
+<div class="faq_question"><a><h3>+ How does Share Your Internet work?</h3></a></div>
+
+<div class="faq_answer_container">
+
+<div class="faq_answer"><h3>When you sign up for a Share Your Internet account we’ll match you to nearby residential neighbors. Sharing a wifi signal means sharing one monthly bill. You’ll end up with the same internet but for less money per month. 
+</h3></div>
+
+</div>
+
+</div>
+
+
+<div class="faq_container">
+
+<div class="faq">
+
+<div class="faq_question"><a><h3>+ Will I be listed on my neighbors bill or will I have to add my neighbor to my bill?</h3></a></div>
+
+<div class="faq_answer_container">
+
+<div class="faq_answer"><h3>No. The person with the router will pay the Internet Service Provider’s bill each month. That person will be sent funds each month from Share Your Internet and the neighbors will pay us.</h3></div>
+
+</div>
+
+</div>
+
+
+<div class="faq_container">
+
+<div class="faq">
+
+<div class="faq_question"><a><h3>+ What if none of my neighbors have signed up? </h3></a></div>
+
+<div class="faq_answer_container">
+
+<div class="faq_answer"><h3>We’ll take your address and reach out to any and all neighbors in your area via snail mail. Once a neighbor signs up we’ll notify you by email.</h3></div>
+
+</div>
+
+</div>
+
+
+<div class="faq_container">
+
+<div class="faq">
+
+<div class="faq_question"><a><h3>+ Will you mention my name to neighbors? Is Share Your Internet anonymous?</h3></a></div>
+
+<div class="faq_answer_container">
+
+<div class="faq_answer"><h3>Share Your Internet is 100% anonymous. Your privacy is important to us and we’ll never share your name, address or other personal information unless required to by law.</h3></div>
+
+</div>
+</div>
+
+
+
+<div class="faq_container">
+
+<div class="faq">
+
+<div class="faq_question"><a><h3>+ Am I allowed to share internet with my neighbors?</h3></a></div>
+
+<div class="faq_answer_container">
+
+<div class="faq_answer"><h3>Some Internet Service Provider (ISP) contracts prohibit the sharing of wifi with anybody outside of the service address. Our Terms Of Service state that our users are responsible for reading and understanding the terms of their contracts with ISP’s as well as any relevant local laws within your jurisdiction. You agree not to use our service if you are prohibited from sharing your wifi where you live or under the terms of any contract to which you are a party.</h3></div>
+
+</div>
+
+</div>
+
+
+<div class="faq_container">
+
+<div class="faq">
+
+<div class="faq_question"><a><h3>+ Is is safe to use my neighbor’s wifi?</h3></a></div>
+
+<div class="faq_answer_container">
+
+<div class="faq_answer"><h3>Using your neighbor’s wifi is as safe if not safer than using any public wifi. We do recommend taking general safety precautions such as using a VPN (especially for sensitive data such as online banking) and products such as https everywhere.</h3></div>
+
+</div>
+
+</div>
+
+
+<div class="faq_container">
+
+<div class="faq">
+
+<div class="faq_question"><a><h3>+ Is it safe to have a neighbor using my wifi?</h3></a></div>
+
+<div class="faq_answer_container">
+
+<div class="faq_answer"><h3>We make very clear in our terms that illegal activity of any kind is strictly forbidden while sharing internet services. Most people can be trusted (think how well ebay works) but if you have concerns we recommend setting up a VPN at the router level.</h3></div>
+
+</div>
+
+</div>
+
+
+<div class="faq_container">
+
+<div class="faq">
+
+<div class="faq_question"><a><h3>+ Do you allow torrent downloading/uploading?</h3></a></div>
+
+<div class="faq_answer_container">
+
+<div class="faq_answer"><h3>Illegal sharing of copyrighted material is strictly forbidden while sharing wifi with neighbors. With that said, some torrents are not copyrighted and therefore sharing of any such files is allowed. While torrenting legal material we still require our users to use a VPN since some ISP’s throttle internet traffic when torrents are being downloaded.</h3><br>
+<h3>Violation of these rules will result in an immediate termination of your Share Your Internet account.</h3></div>
+
+</div>
+
+</div>
+
+
+
+<div class="faq_container">
+
+<div class="faq">
+
+<div class="faq_question"><a><h3>+ How much does Share Your Internet cost?</h3></a></div>
+
+<div class="faq_answer_container">
+
+<div class="faq_answer"><h3>It terms of money spent per month you will come out ahead each and every month. Share Your Internet charges $5 a month for the facilitation of your wifi sharing. This means that if you and your neighbor are both paying $100 a month each for internet you will now pay $55 a month for the same internet, the same speed, the same everything!</h3><br>
+<h3>What will you do with your savings?</h3></div>
+
+</div>
+
+</div>
+
+
 </div>
