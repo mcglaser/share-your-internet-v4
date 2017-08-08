@@ -41,7 +41,7 @@
                      <% else %>
                        <li><%= link_to "Log Out", logout_path, method: :delete %></li>
                        <li><%= link_to "Your Account", user_path(current_user) %></li>
-                       <li><a href="#">FAQ</a></li>                      
+                       <li><%= link_to "FAQ", faq_path %></li>                      
                      <% end %>
                      </ul>
           </div>
