@@ -316,6 +316,17 @@ body {
   border-color: #2C3E50;
 }
 
+.form-container-sign-in {
+  max-width: 500px;
+  margin: 20px auto 0 auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border: 2px solid;
+  border-style: solid;
+  border-width: 5px;
+  border-color: #2C3E50;
+}
+
 
 .form-row {
   max-width: 350px;  
